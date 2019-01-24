@@ -10,7 +10,23 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            var dog_and_cat = new Car();
+            var bowling = new Car();
+            Console.WriteLine("How many cars : {0}",Vehicle.howManyCars );
+        }
+    }
+    class Vehicle
+    {
+        public static int howManyCars = 0;
+        public String Color = "Blue";
+    }
+    class Car: Vehicle
+    {
+        public String Color = "Red";
+        public Car()
+        {
+            Vehicle.howManyCars++;
+            Console.WriteLine("My color is " + Color);
         }
     }
 }
